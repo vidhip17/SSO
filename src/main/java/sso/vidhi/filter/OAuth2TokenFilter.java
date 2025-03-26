@@ -65,8 +65,6 @@ public class OAuth2TokenFilter extends OncePerRequestFilter {
                 // Extract user details from the token
                 String username = tokenService.extractUsername(token);
                 List<String> roles = tokenService.extractRoles(token);
-                System.err.println("inside filter"+username);
-                System.err.println("inside filter roles"+roles);
 
                 // Convert roles to GrantedAuthorities
                 List<GrantedAuthority> authorities = new ArrayList<>();
